@@ -4,25 +4,75 @@
     "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
-        "answer": 2,
+        "image": "https://www.desktopbackground.org/p/2011/02/14/157823_36-millennium-falcon-hd-wallpapers_1280x1024_h.jpg",
+        "title": "Qual o nome da nave que pertence ao famoso mercenário Han Solo?",
+        "description": "Essa é fácil, só pra aquecer",
+        "answer": 1,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Millennium Eagle",
+          "Millennium Falcon",
+          "Ghost",
+          "Slave I"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
+        "image": "https://i.redd.it/8f9p24zzthp51.jpg",
+        "title": "Qual dos seguintes filmes foi lançando primeiro?",
+        "description": "Mais uma fácil",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+           "4",
+           "9",
+           "7",
+           "3"
+        ]
+      },
+      {
+        "image": "https://wallpapercave.com/wp/wp7735237.jpg",
+        "title": "Na série The Mandalorian qual o nome da criatura verde que o Mandaloriano cuida?",
+        "description": "Vamos dificultar um pouco",
+        "answer": 2,
+        "alternatives": [
+           "Baby Yoda",
+           "Yoda",
+           "Grogu",
+           "Yaddle"
+        ]
+      },
+      {
+        "image": "https://starwarsblog.starwars.com/wp-content/uploads/2020/09/star-wars-darth-vader-5-TALL.jpg",
+        "title": "Como se chama o(a) primeiro(a) padawan de Anakin Skywalker?",
+        "description": "Estamos esquentando",
+        "answer": 0,
+        "alternatives": [
+           "Ahsoka tano",
+           "Ben Solo",
+           "Grogu",
+           "Grande Enquisidor"
+        ]
+      },
+      {
+        "image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b7ba68e7-d812-4ee4-bb2b-1fe4579cc623/das8m5d-a8c888d4-e6b1-449b-8ebc-01bd6b87e0aa.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvYjdiYTY4ZTctZDgxMi00ZWU0LWJiMmItMWZlNDU3OWNjNjIzXC9kYXM4bTVkLWE4Yzg4OGQ0LWU2YjEtNDQ5Yi04ZWJjLTAxYmQ2Yjg3ZTBhYS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.3Qcdz93br0ETOrCj99lGlWdDCV3P9Tis1iz0xJ5tobg",
+        "title": "Qual o modelo do robo parceiro de Hera Hera Syndulla?",
+        "description": "Cuidado com as pegadinhas",
+        "answer": 3,
+        "alternatives": [
+           "Chooper",
+           "C3PO",
+           "R6-D2",
+           "C1-10P"
+        ]
+      },
+      {
+        "image": "https://revistapolen.com/wp-content/uploads/2015/11/4-Hoth-Fight-CROPPED-e1448588749341.jpg",
+        "title": "O que o Han Solo responde para Princesa Leia quando ela diz \"Eu te amo\" para ele?",
+        "description": "Cena clássica",
+        "answer": 1,
+        "alternatives": [
+           "Eu também",
+           "Eu sei",
+           "Eu te amo",
+           "Não fala nada e vai embora"
         ]
       }
     ],
