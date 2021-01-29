@@ -1,17 +1,17 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
 
-import db from '../db.json';
-import Widget from '../src/components/Widget';
-import QuizBackground from '../src/components/QuizBackground';
-import GitHubCorner from '../src/components/GitHubCorner';
-import QuizContainer from '../src/components/QuizContainer';
-import QuizLogo from '../src/components/QuizLogo';
-import AlternativeForm from '../src/components/AlternativeForm';
-import Button from '../src/components/Button';
+import Widget from '../../components/Widget';
+import QuizBackground from '../../components/QuizBackground';
+import GitHubCorner from '../../components/GitHubCorner';
+import QuizContainer from '../../components/QuizContainer';
+import QuizLogo from '../../components/QuizLogo';
+import AlternativeForm from '../../components/AlternativeForm';
+import Button from '../../components/Button';
+import BackLinkArrow from '../../components/BackLinkArrow';
 
 // eslint-disable-next-line no-unused-vars
-function ResultWidget({ results }) {
+function ResultWidget({ results, userName }) {
   return (
     <Widget>
       <Widget.Header>
@@ -23,6 +23,8 @@ function ResultWidget({ results }) {
           {results.filter((x) => x).length}
           {' '}
           perguntas
+          {' '}
+          {userName}
         </p>
         <ul>
           {results.map((result, index) => (
@@ -51,7 +53,7 @@ function LoadingWidget() {
         Carregando...
       </Widget.Header>
       <Widget.Content>
-        [Desafio do Loading]
+        Carregando pergunta
       </Widget.Content>
     </Widget>
   );
@@ -68,6 +70,7 @@ function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
+        <BackLinkArrow href="/" />
         <h3>
           {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
         </h3>
@@ -131,11 +134,11 @@ const screenStates = {
   RESULT: 'RESULT',
 };
 
-export default function Quiz() {
+export default function Quiz({ externalQuestions, externalBg, userName }) {
   const [screenState, setScreenState] = useState(screenStates.LOADING);
   const [questionIndex, setQuestionIndex] = useState(0);
-  const totalQuestions = db.questions.length;
-  const question = db.questions[questionIndex];
+  const totalQuestions = externalQuestions.length;
+  const question = externalQuestions[questionIndex];
   const [results, setResults] = useState([]);
 
   function addResult(result) {
@@ -159,7 +162,7 @@ export default function Quiz() {
   }
 
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground backgroundImage={externalBg}>
       <QuizContainer>
         <QuizLogo />
         { screenState === screenStates.QUIZ && (
@@ -172,7 +175,13 @@ export default function Quiz() {
           />
         )}
         {screenState === screenStates.LOADING && <LoadingWidget />}
-        {screenState === screenStates.RESULT && <ResultWidget results={results} />}
+        {screenState === screenStates.RESULT
+          && (
+          <ResultWidget
+            results={results}
+            userName={userName}
+          />
+          )}
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/LucasSargeir/sw-quiz" />
     </QuizBackground>
